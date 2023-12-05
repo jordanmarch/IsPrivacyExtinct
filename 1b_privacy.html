@@ -1,0 +1,62 @@
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="newstyle.css">
+  </head>
+  
+  <body>
+  <div class="container">
+
+
+          <p style="color:#ffffff ;text-align:center; font-size:120%;">Is Privacy Extinct?</p>
+     
+  </div>
+  
+  <div class="video-container">
+    <button id="playButton">&#9654; Play</button>
+    <video playsinline id="myVideo">
+        <source src="https://link.storjshare.io/raw/jxh6wjcomi7prxxvgvxrpddhkopq/privacy-defined%2F1a_CC_privacydefined.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    var video = document.getElementById('myVideo');
+    var playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', function () {
+        if (video.paused) {
+            video.play();
+            playButton.style.display = 'none';
+        }
+    });
+
+</script>
+<br>
+<br>
+<center>
+    <a href="1c_info.html">
+        <button id="nextButton" onclick="nextButtonClick()">NEXT</button>
+    </a>
+</center>
+
+<script>
+    var videoPlayer = document.getElementById('myVideo');
+    var nextButton = document.getElementById('nextButton');
+
+    videoPlayer.addEventListener('ended', function () {
+        nextButton.style.display = 'block';
+    });
+
+    function nextButtonClick() {
+        // Handle what happens when the "NEXT" button is clicked
+        alert('Next button clicked!');
+        // You can add your logic for transitioning to the next part of your content
+    }
+</script>
+
+
+</body>
+</html>
